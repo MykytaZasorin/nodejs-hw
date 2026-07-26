@@ -11,6 +11,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './middleware/logger.js';
 import notesRoutes from './routes/notesRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 // Main settings
 const app = express();
@@ -24,6 +25,7 @@ app.use(logger);
 // Roots
 app.use(notesRoutes);
 app.use(authRoutes);
+app.use(userRoutes);
 
 // Check errors
 app.use(notFoundHandler);
